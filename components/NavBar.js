@@ -5,31 +5,66 @@ import {
   Navbar, //
   Container,
   Nav,
-  Button,
+  NavDropdown,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
 
 export default function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar expand="lg">
       <Container>
         <Link passHref href="/">
-          <Navbar.Brand>CHANGE ME</Navbar.Brand>
+          {/* <Navbar.Brand><img src="/./images/CurlPowerLogo.png" alt="Curl Power Logo" width="65" height="80" /></Navbar.Brand> */}
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse>
           <Nav className="me-auto">
-            {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <Link passHref href="/">
-              <Nav.Link>Home</Nav.Link>
+              <Nav.Link>Hair Type Information</Nav.Link>
             </Link>
-            <Link passHref href="/delete-me">
-              <Nav.Link>Delete Me</Nav.Link>
-            </Link>
-            <Button variant="danger" onClick={signOut}>
-              Sign Out
-            </Button>
           </Nav>
+          <Nav className="me-auto">
+            <Link passHref href="/routines">
+              <Nav.Link>Routine Collection</Nav.Link>
+            </Link>
+          </Nav>
+          <Nav className="me-auto">
+            <Link passHref href="/products">
+              <Nav.Link>Product Collection</Nav.Link>
+            </Link>
+          </Nav>
+          <NavDropdown className="nav-dropdown">
+            <Link passHref href="/">
+              <NavDropdown.Item>
+                Hair Type Information
+              </NavDropdown.Item>
+            </Link>
+            <Link passHref href="/routines">
+              <NavDropdown.Item>
+                Routine Collection
+              </NavDropdown.Item>
+            </Link>
+            <Link passHref href="/products">
+              <NavDropdown.Item>
+                Product Collection
+              </NavDropdown.Item>
+            </Link>
+            <Link passHref href="/routine/new">
+              <NavDropdown.Item>
+                Share Routine
+              </NavDropdown.Item>
+            </Link>
+            <Link passHref href="/product/new">
+              <NavDropdown.Item>
+                Submit Product
+              </NavDropdown.Item>
+            </Link>
+            <NavDropdown.Item>
+              <button type="button" className="btn btn-sign-out" onClick={signOut}>
+                Sign Out
+              </button>
+            </NavDropdown.Item>
+          </NavDropdown>
         </Navbar.Collapse>
       </Container>
     </Navbar>
