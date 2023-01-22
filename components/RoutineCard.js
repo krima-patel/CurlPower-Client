@@ -1,37 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
+import Link from 'next/link';
+// import { useAuth } from '../utils/context/authContext';
+// import { useAuth } from '../utils/context/authContext';
 
-export default function RoutineCard({ title, hairType, date }) {
+export default function RoutineCard({
+  id, title, hairType, date,
+}) {
+  // const { user } = useAuth();
   return (
     <>
       <Card className="routine-cards" style={{ width: '18rem', margin: '15px' }}>
         <Card.Body style={{ textAlign: 'left' }}>
           <Card.Subtitle className="routine-hairType">
-            <b>Hair Type {hairType}</b>
+            <b>Hair Type: {hairType}</b>
           </Card.Subtitle>
           <Card.Title className="routine-title">
             <b>{title}</b>
           </Card.Title>
           <Card.Subtitle className="routine-date">Posted: {date}</Card.Subtitle>
-          {/* <h5 style={{ color: '#DC6434' }}>{user}</h5> */}
-          {/* {user.uid === routineObj.uid ? (
-            <>
-              <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
-                <Button className="routine-btns">Learn More</Button>
-              </Link>
-              <Link href={`/routine/edit/${routineObj.firebaseKey}`} passHref>
-                <Button className="routine-btns">Update</Button>
-              </Link>
-              <Button onClick={deleteThisRoutine} className="routine-btns" id="delete-btn">
-                Delete
-              </Button>
-            </>
-          ) : (
-            <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
+          <>
+            <Link href={`/routine/${id}`} passHref>
               <Button className="routine-btns">Learn More</Button>
             </Link>
-          )} */}
+            <Link href={`/routine/edit/${id}`} passHref>
+              <Button className="routine-btns">Update</Button>
+            </Link>
+          </>
         </Card.Body>
       </Card>
     </>
@@ -39,6 +35,7 @@ export default function RoutineCard({ title, hairType, date }) {
 }
 
 RoutineCard.propTypes = {
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   hairType: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,

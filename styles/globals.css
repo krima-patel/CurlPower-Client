@@ -4,8 +4,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Luckiest Guy';
+
 }
 
 a {
@@ -18,5 +18,150 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: #fffcf1;
+}
+
+.welcome {
+  margin: 25px;
+  text-align: center;
+}
+
+.btn-sign-out {
+  background-color: #DC6434;
+  color: white;
+}
+
+p {
+  margin: 25px;
+}
+
+.hair-chart {
+  display: flex;
+  justify-content: center;
+  border: 6px solid;
+  background: transparent;
+  border-image: linear-gradient(45deg, #344729, #F8E9E9) 1;
+  border-radius: 5px;
+  object-fit: cover;
+  height: 40vh;
+}
+
+.hair-info {
+  width: 30%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.hairtype-pictures {
+  display: flex;
+  justify-content: center;
+  border: 6px solid;
+  background: transparent;
+  border-image: linear-gradient(45deg, #344729, #F8E9E9) 1;
+  border-radius: 5px;
+  width: 22rem;
+  height: 40vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+.sign-in {
+  background-color: #DC6434;
+  color: white;
+}
+
+.hair-type-title {
+  margin: 25px;
+}
+
+.card-groups {
+  margin: 25px;
+  border: 6px solid;
+  border-image: linear-gradient(45deg, #344729, #F8E9E9) 1;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+h1, h2 {
+  color: #DC6434;
+}
+
+.routine-hairType {
+  font-size: 20px;
+  text-align: center;
+  color:#344729;
+  margin-top: 5%;
+}
+
+.routine-title, .product-name {
+  color:#DC6434;
+  font-size: 25px;
+  text-align: center;
+  margin: 5%;
+}
+
+.user-image {
+  border-radius: 100%;
+  width: 25%;
+}
+
+.collection {
+  text-align: center;
+}
+
+.routine-btns, .product-btns {
+  background-color: #DC6434;
+  border-color: #DC6434;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 10px;
+}
+
+.routine-date, .product-date {
+  color: #344729;
+  font-size: 17px;
+}
+
+#delete-btn {
+  padding: 6px 50px 6px 40px;
+}
+
+#delete-product-btn {
+  padding: 6px 50px 6px 40px;
+}
+
+.routine-form-btn {
+  background-color: #DC6434;
+  border-color: #DC6434;
+  margin: 1% auto;
+}
+
+.product-form-btn {
+  background-color: #DC6434;
+  border-color: #DC6434;
+}
+
+.routine-cards, .product-cards {
+  padding: 10px 20px;
+  border: 6px solid;
+  background: transparent;
+  border-image: linear-gradient(45deg, #344729, #F8E9E9) 1;
+  border-radius: 5px;
+}
+
+.product-purpose {
+  margin: 10% auto;
+}
+
+.productsContainer {
+  display: flex;
+  display: row;
 }

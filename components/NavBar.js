@@ -13,9 +13,6 @@ export default function NavBar() {
   return (
     <Navbar expand="lg">
       <Container>
-        <Link passHref href="/">
-          {/* <Navbar.Brand><img src="/./images/CurlPowerLogo.png" alt="Curl Power Logo" width="65" height="80" /></Navbar.Brand> */}
-        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse>
           <Nav className="me-auto">
