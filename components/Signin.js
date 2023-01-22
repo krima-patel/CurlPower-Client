@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import { signIn } from '../utils/auth';
 
 function Signin() {
@@ -8,20 +7,16 @@ function Signin() {
       className="text-center d-flex flex-column justify-content-center align-content-center"
       style={{
         height: '90vh',
-        padding: '30px',
+        maxWidth: '500px',
         margin: '0 auto',
-        zIndex: 1,
-        minHeight: '25rem',
-        width: '100%',
-        minWidth: '30rem',
-        paddingBlock: '0 5rem',
       }}
     >
-      <h1>Hi there!</h1>
-      <p>Click the button below to login!</p>
-      <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
+      {/* <img width={250} style={{ margin: '0 auto' }} src="/./images/CurlPowerLogo.png" alt="Hair Type Chart" /> */}
+      <p>Welcome to <b style={{ color: '#DC6434' }}>Curl Power</b>, a community dedicated to those with naturally curly hair, looking to either share or seek advice on various hair types. Share routines and products that have worked for you, because if you have curly hair, you know it&#39;s difficult out here and we could all use the help. If you are not sure where to begin or want to spice up your curls, then you&#39;ve come to the right place! Learn to love your curls here.</p>
+      <h3>Join <b style={{ color: '#DC6434' }}>Curl Power</b> by clicking the button below!</h3>
+      <button type="button" className="sign-in btn btn-lg copy-btn" onClick={signIn}>
         Sign In
-      </Button>
+      </button>
     </div>
   );
 }

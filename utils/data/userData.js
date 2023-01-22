@@ -12,6 +12,7 @@ const getUser = (userId, uid = '') => new Promise((resolve, reject) => {
     resolve({
       id: data.id,
       name: data.name,
+      uid: data.uid,
     });
   })
   .catch(reject);
